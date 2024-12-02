@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e7f3fe;
+}
+header {
+    background: white;
+    color: black;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo img {
+    height: 120px;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.menu {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: color 0.3s;
+    padding: 10px 20px;
+    background: #f8f8f8;
+    border-radius: 5px;
+    min-width: 120px;
+    text-align: center;
+}
+.menu:hover {
+    color: #4a90e2;
+}
+.dropdown {
+    display: none;
+    flex-direction: column;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 5px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    box-sizing: border-box;
+    top: 100%; /* Posiciona el dropdown justo debajo del menú */
+    left: 0;
+}
+.dropdown a {
+    display: block;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+    text-align: center;
+}
+.dropdown a:hover {
+    background: #f0f0f0;
+}
+nav:hover .dropdown {
+    display: flex;
+}
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #e7f3fe;
+}
+h1 {
+    margin: 0;
+    font-size: 2.2em;
+    line-height: 1.6;
+}
+.hero p, .section p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+.episodes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.episode {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.episode-image {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.cta-button {
+    background: #4caf50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 60px;
+    font-size: 1.2em;
+    display: inline-block;
+}
+.section {
+    padding: 30px 20px;
+    text-align: center;
+}
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.8em;
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    .logo img {
+        height: 100px;
+    }
+    nav {
+        width: 100%;
+        max-width: 300px; /* Asegúrate de que el ancho sea igual al del menú desplegable */
+        margin: 0 auto;
+    }
+    .menu {
+        display: block;
+        font-size: 1.1em;
+        padding: 8px 15px;
+        width: auto;
+    }
+    .dropdown {
+        position: static; /* Cambia a static en móviles */
+        width: 100%; /* Asegúrate de que el dropdown ocupe el 100% */
+        margin-top: 5px;
+    }
+    .dropdown a {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    .episode {
+        width: 100%;
+        max-width: 300px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    .hero p, .section p {
+        font-size: 1em;
+    }
+}
